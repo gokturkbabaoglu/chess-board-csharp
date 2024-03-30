@@ -45,7 +45,7 @@ namespace chess_board_csharp
                         buttons[i, j].BackColor = Color.Black;
                         buttons[i, j].ForeColor = Color.White;
                     }
-                    this.Controls.Add(buttons[i, j]);
+                    Controls.Add(buttons[i, j]);
                 }
             }
         }
@@ -73,7 +73,7 @@ namespace chess_board_csharp
             {
                 for (int i = 0; i < 8; i++)
                 {
-                    this.Controls.Remove(buttons[i, j]);
+                    Controls.Remove(buttons[i, j]);
                 }
             }
         }
