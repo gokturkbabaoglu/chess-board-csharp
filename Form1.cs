@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,6 +22,7 @@ namespace chess_board_csharp
         {
             button1.Enabled = false;
             button2.Enabled = true;
+            button3.Enabled = true;
 
             int buttonSize = 50;
 
@@ -58,6 +60,20 @@ namespace chess_board_csharp
                 {
                     buttons[i, j].Text = counter.ToString();
                     counter++;
+                }
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            button1.Enabled = true;
+            button2.Enabled = false;
+            button3.Enabled = false;
+            for (int j = 0; j < 8; j++)
+            {
+                for (int i = 0; i < 8; i++)
+                {
+                    this.Controls.Remove(buttons[i, j]);
                 }
             }
         }
